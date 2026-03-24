@@ -70,3 +70,28 @@
 .detail-types {
   font-weight: 600;
 }
+
+@media (max-width: 600px) {
+  .detail-card {
+    padding: 18px;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-header h1 {
+    font-size: 28px;
+  }
+
+  .detail-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .detail-meta div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

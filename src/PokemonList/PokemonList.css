@@ -61,3 +61,34 @@
   font-weight: 500;
   color: var(--text);
 }
+
+@media (max-width: 900px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 16px 36px;
+  }
+
+  .pokemon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .pokemon-card {
+    padding: 12px;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .pokemon-grid {
+    grid-template-columns: 1fr;
+  }
+}
