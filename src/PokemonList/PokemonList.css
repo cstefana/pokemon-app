@@ -1,0 +1,63 @@
+.page {
+  padding: 32px 24px 48px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pokemon-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.pokemon-card {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  text-transform: capitalize;
+}
+
+.pokemon-link {
+  text-decoration: none;
+  color: var(--text-h);
+  font-weight: 600;
+  display: block;
+}
+
+.pokemon-link:hover {
+  color: var(--accent);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-count {
+  font-weight: 500;
+  color: var(--text);
+}
