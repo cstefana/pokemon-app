@@ -1,20 +1,13 @@
-import { usePokemon } from './hooks/usePokemon'
+import { Route, Routes } from 'react-router-dom'
+import { PokemonDetail } from './components/PokemonDetail'
+import { PokemonList } from './components/PokemonList'
 
 function App() {
-  const { pokemon, loading, error } = usePokemon()
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error: {error}</p>
-
   return (
-    <main>
-      <h1>Pokemon</h1>
-      <ul>
-        {pokemon.map((item) => (
-          <li key={item.name}>{item.name}</li>
-        ))}
-      </ul>
-    </main>
+    <Routes>
+      <Route path="/" element={<PokemonList />} />
+      <Route path="/pokemon/:id" element={<PokemonDetail />} />
+    </Routes>
   )
 }
 
